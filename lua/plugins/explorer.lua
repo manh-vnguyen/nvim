@@ -14,8 +14,18 @@ return {
     },
     {
       "<leader>o",
-      "<cmd>NvimTreeFocus<CR>",
-      desc = "Focus Explorer",
+      function()
+        local api = require("nvim-tree.api")
+
+        if api.tree.is_visible() and api.tree.is_tree_buf() then
+          -- Currently in NvimTree -> go back to previous window
+          vim.cmd("wincmd p")
+        else
+          -- Focus NvimTree
+          api.tree.focus()
+        end
+      end,
+      desc = "Toggle focus between editor and explorer",
     },
   },
 

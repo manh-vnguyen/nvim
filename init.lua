@@ -10,8 +10,6 @@ vim.opt.termguicolors = true
 require("config.lazy")
 require("config.lsp")
 
--- Map switch to directory view
--- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
 
 -- Line numbers
 vim.opt.relativenumber = true
@@ -28,8 +26,14 @@ vim.opt.softtabstop = 2
 vim.opt.linebreak = true
 
 -- Keep cursor centered when scrolling
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+
+-- Cursor movement mappings
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "L", "$")
+vim.keymap.set("n", "<S-k>", "H")
+vim.keymap.set("n", "<S-j>", "L")
 
 -- Highlight cursor line
 vim.opt.cursorline = true
@@ -37,5 +41,5 @@ vim.opt.cursorline = true
 -- Option + Delete clear a word
 vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
 vim.keymap.set("i", "<M-b>", "<Esc>bi", { noremap = true })
-vim.keymap.set("i", "<M-f>", "<Esc>ea", { noremap = true })
+vim.keymap.set("i", "<M-f>", "<Esc>[a", { noremap = true })
 

@@ -1,0 +1,2 @@
+local name = "/Users/manh/syncProjects/configs/nvim-lazy/NvimTree_1"
+print(name:match("^.*/NvimTree_%d+$") ~= nil)
