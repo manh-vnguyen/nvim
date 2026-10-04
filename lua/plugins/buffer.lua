@@ -20,9 +20,9 @@ return {
         ignore_ft = {
           "gitcommit",
           "gitrebase",
-          "NvimTree"
+          -- "NvimTree"
         },
-        default_position = "top_right"
+        default_position = "bottom_right"
       },
       --- Buffers that should be ignored by buffon
       --- It accepts a list of regex patterns
@@ -41,12 +41,12 @@ return {
       leader_key = "\\",
       mapping_chars = "qweryuiop",
       keybindings = {
-        goto_next_buffer = "<c-j>",
-        goto_previous_buffer = "<c-k>",
-        move_buffer_down = "<c-l>",
-        move_buffer_up = "<c-h>",
-        move_buffer_top = "<c-t>",
-        move_buffer_bottom = "<c-b>",
+        goto_next_buffer = "<s-j>",
+        goto_previous_buffer = "<s-k>",
+        move_buffer_down = "<s-l>",
+        move_buffer_up = "<s-h>",
+        move_buffer_top = "<s-t>",
+        move_buffer_bottom = "<s-b>",
         toggle_buffon_window = "<buffonleader>n",
         --- Toggle window position allows moving the main window position
         --- between top-right and bottom-right positions

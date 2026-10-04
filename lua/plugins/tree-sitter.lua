@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   branch = "main",
+  lazy = false,
   build = ":TSUpdate",
   event = { "BufReadPost", "BufNewFile" },
   opts = {
@@ -15,6 +16,7 @@ return {
       "tsx",
       "json",
       "html",
+      "htmldjango",
       "css",
       "bash",
       "markdown",
@@ -33,5 +35,7 @@ return {
         pcall(vim.treesitter.start, args.buf)
       end,
     })
+    vim.treesitter.language.register("xml", { "svg", "xslt" })
+    vim.treesitter.language.register("html", "htmldjango")
   end,
 }
