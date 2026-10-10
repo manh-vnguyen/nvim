@@ -47,6 +47,7 @@ vim.keymap.set({ "n" }, "<M-c>", "\"+yy")
 vim.keymap.set({ "x" }, "<M-c>", "\"+y")
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>D", '"_D')
+vim.keymap.set("i", "<D-/>", "<Esc>gcla")
 
 -- Whichwrap helps arrow going to the next or previous lines
 vim.opt.whichwrap:append("h,l")

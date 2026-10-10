@@ -39,7 +39,7 @@ return {
           vim.system({
             "hs",
             "-c",
-            [[hs.window.focusedWindow():focusWindowEast()]],
+            [[hs.window.focusedWindow():focusWindowWest()]],
           })
         end,
       })
