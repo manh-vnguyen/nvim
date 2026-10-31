@@ -33,6 +33,12 @@ return {
     vim.api.nvim_create_autocmd("FileType", {
       callback = function(args)
         pcall(vim.treesitter.start, args.buf)
+
+        -- Restore Vim syntax highlighting for Python indentation
+        if args.match == "python" then
+            vim.bo[args.buf].syntax = "ON"
+        end
+
       end,
     })
     vim.treesitter.language.register("xml", { "svg", "xslt" })

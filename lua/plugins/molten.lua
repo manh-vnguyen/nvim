@@ -47,52 +47,58 @@ return {
 
     keys = {
       {
-        "<leader>mi",
+        "mi",
         "<cmd>MoltenInit<CR>",
         desc = "Molten: initialize kernel",
       },
       {
-        "<leader>ml",
+        "ml",
         "<cmd>MoltenEvaluateLine<CR>",
         desc = "Molten: evaluate line",
       },
       {
-        "<leader>mr",
+        "mr",
         "<cmd>MoltenReevaluateCell<CR>",
         desc = "Molten: reevaluate cell",
       },
       {
-        "<leader>md",
+        "md",
         "<cmd>MoltenDelete<CR>",
         desc = "Molten: delete cell",
       },
       {
-        "<leader>mo",
+        "mo",
         "<cmd>MoltenShowOutput<CR>",
         desc = "Molten: show output",
       },
       {
-        "<leader>mh",
+        "mh",
         "<cmd>MoltenHideOutput<CR>",
         desc = "Molten: hide output",
       },
       {
-        "<leader>mx",
+        "mx",
         "<cmd>MoltenInterrupt<CR>",
         desc = "Molten: interrupt kernel",
       },
       {
-        "<leader>me",
+        "me",
         ":<C-u>MoltenEvaluateVisual<CR>gv",
         mode = "x",
         silent = true,
         desc = "Molten: evaluate selection",
       },
       {
-        "<leader>m",
+        "m",
         "<cmd>MoltenEvaluateOperator<CR>",
         mode = "n",
         desc = "Molten: evaluate motion",
+      },
+      {
+        "mo",
+        "<cmd>noautocmd MoltenEnterOutput<CR>",
+        mode = "n",
+        desc = "Molten: Enter output",
       },
     },
   },

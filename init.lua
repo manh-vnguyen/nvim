@@ -1,8 +1,10 @@
 
 vim.g.mapleader = " "
+vim.o.autochdir = true
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
@@ -25,6 +27,11 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.softtabstop = 2
+vim.g.python_indent = {
+    open_paren = "shiftwidth()",
+    nested_paren = "shiftwidth()",
+    continue = "shiftwidth()",
+}
 
 -- Wrap long lines at word boundaries
 vim.opt.linebreak = true
@@ -54,6 +61,8 @@ vim.opt.whichwrap:append("h,l")
 
 -- Highlight cursor line
 vim.opt.cursorline = true
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:block-blinkwait700-blinkoff400-blinkon250"
+.. ",r-cr-o:hor20"
 
 -- Option + Delete clear a word
 vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
@@ -63,3 +72,7 @@ vim.keymap.set("i", "<M-f>", "<Esc>ea")
 
 -- Vimtex
 vim.g.vimtex_quickfix_open_on_warning = 0
+
+
+
+
